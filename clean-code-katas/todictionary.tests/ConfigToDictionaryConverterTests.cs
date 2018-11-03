@@ -67,7 +67,7 @@ namespace todictionary.tests
 
         internal Dictionary<string, string> WriteToDictionary(IEnumerable<(string,string)> keyValuePairs)
         {
-            throw new NotImplementedException();
+            return keyValuePairs.ToDictionary(kv => kv.Item1, kv => kv.Item2);
         }
     }
 }
