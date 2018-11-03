@@ -37,6 +37,17 @@ namespace todictionary.tests
 
             actual.Should().BeEquivalentTo(expected);
         }
+
+        [Fact]
+        public void WriteToDictionary_GivenKeyValuePairs_ShouldReturnFilledDictionary()
+        {
+            var keyValuePairs = new List<(string, string)> { ("a", "1"), ("b", "2"), ("c", "3"), ("d", "4") };
+            var expected = new Dictionary<string, string> {{"a", "1"}, {"b", "2"}, {"c", "3"}, {"d", "4"}};
+
+            var actual = _target.WriteToDictionary(keyValuePairs);
+
+            expected.Should().BeEquivalentTo(actual);
+        }
     }
 
     internal class ConfigToDictionaryConverter
@@ -52,6 +63,11 @@ namespace todictionary.tests
         {
             var keyValues = settings.Select(s => (s.Split('=')));
             return keyValues.Select(kv => Tuple.Create(kv[0], kv[1]));
+        }
+
+        public Dictionary<string, string> WriteToDictionary(IEnumerable<(string,string)> keyValuePairs)
+        {
+            throw new NotImplementedException();
         }
     }
 }
