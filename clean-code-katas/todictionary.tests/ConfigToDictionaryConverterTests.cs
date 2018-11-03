@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Xunit;
 
@@ -49,7 +50,8 @@ namespace todictionary.tests
 
         internal IEnumerable<Tuple<string, string>> SplitIntoKeyValuePairs(string[] settings)
         {
-            throw new NotImplementedException();
+            var keyValues = settings.Select(s => (s.Split('=')));
+            return keyValues.Select(kv => Tuple.Create(kv[0], kv[1]));
         }
     }
 }
