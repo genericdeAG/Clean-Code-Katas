@@ -22,9 +22,9 @@ namespace todictionary.tests
             var csv = "a=1;b=2;c=3;d=4;";
             var expected = new[] {"a=1", "b=2", "c=3", "d=4"};
 
-            var result = _target.SplitIntoSettings(csv);
+            var actual = _target.SplitIntoSettings(csv);
 
-            result.Should().BeEquivalentTo(expected);
+            expected.Should().BeEquivalentTo(actual);
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace todictionary.tests
 
             var actual = _target.SplitIntoKeyValuePairs(settings);
 
-            actual.Should().BeEquivalentTo(expected);
+            expected.Should().BeEquivalentTo(actual);
         }
 
         [Fact]
@@ -52,20 +52,20 @@ namespace todictionary.tests
 
     internal class ConfigToDictionaryConverter
     {
-        public IEnumerable SplitIntoSettings(string configuration)
+        internal IEnumerable<string> SplitIntoSettings(string configuration)
         {
-            var delimiters = new string[] { ";" };
+            var delimiters = new[] { ";" };
             var settings = configuration.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
             return settings;
         }
 
-        internal IEnumerable<Tuple<string, string>> SplitIntoKeyValuePairs(string[] settings)
+        internal IEnumerable<(string, string)> SplitIntoKeyValuePairs(IEnumerable<string> settings)
         {
             var keyValues = settings.Select(s => (s.Split('=')));
-            return keyValues.Select(kv => Tuple.Create(kv[0], kv[1]));
+            return keyValues.Select(kv => (kv[0], kv[1]));
         }
 
-        public Dictionary<string, string> WriteToDictionary(IEnumerable<(string,string)> keyValuePairs)
+        internal Dictionary<string, string> WriteToDictionary(IEnumerable<(string,string)> keyValuePairs)
         {
             throw new NotImplementedException();
         }
