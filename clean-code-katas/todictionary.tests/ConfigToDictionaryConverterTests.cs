@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using FluentAssertions;
 using Xunit;
 
@@ -27,9 +28,11 @@ namespace todictionary.tests
 
     internal class ConfigToDictionaryConverter
     {
-        public IEnumerable SplitIntoSettings(string csv)
+        public IEnumerable SplitIntoSettings(string configuration)
         {
-            throw new System.NotImplementedException();
+            var delimiters = new string[] { ";" };
+            var settings = configuration.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+            return settings;
         }
     }
 }
