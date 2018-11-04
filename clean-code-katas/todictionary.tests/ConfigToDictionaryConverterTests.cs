@@ -83,7 +83,9 @@ namespace todictionary.tests
 
         public Dictionary<string, string> ToDictionary(string csv)
         {
-            throw new NotImplementedException();
+            var settings = SplitIntoSettings(csv);
+            var keyValuePairs = SplitIntoKeyValuePairs(settings);
+            return WriteToDictionary(keyValuePairs);
         }
     }
 }
