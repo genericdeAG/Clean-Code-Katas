@@ -17,6 +17,17 @@ namespace todictionary.tests
         }
 
         [Fact]
+        public void ToDictionary_GivenConfigCsv_ShouldReturnDictionaryFilledWithTheConfiguration()
+        {
+            var csv = "a=1;b=2;c=3;d=4;";
+            var expected = new Dictionary<string, string> { { "a", "1" }, { "b", "2" }, { "c", "3" }, { "d", "4" } };
+
+            var actual = _target.ToDictionary(csv);
+
+            expected.Should().BeEquivalentTo(actual);
+        }
+
+        [Fact]
         public void SplitIntoSettings_GivenCsvConfig_ShouldReturnSettings()
         {
             var csv = "a=1;b=2;c=3;d=4;";
@@ -68,6 +79,11 @@ namespace todictionary.tests
         internal Dictionary<string, string> WriteToDictionary(IEnumerable<(string,string)> keyValuePairs)
         {
             return keyValuePairs.ToDictionary(kv => kv.Item1, kv => kv.Item2);
+        }
+
+        public Dictionary<string, string> ToDictionary(string csv)
+        {
+            throw new NotImplementedException();
         }
     }
 }
