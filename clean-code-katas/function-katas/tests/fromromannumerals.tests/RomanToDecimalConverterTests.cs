@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Xunit;
 
@@ -31,9 +32,20 @@ namespace fromromannumerals.tests
 
     internal class RomanToDecimalConverter
     {
-        public IEnumerable<int> MapRomanDigitsToDecimalDigits(string romanNumber)
+        private readonly Dictionary<char, int> _numbers = new Dictionary<char, int>
         {
-            throw new System.NotImplementedException();
+            { 'I',1 },
+            { 'V',5 },
+            { 'X',10 },
+            { 'L',50 },
+            { 'C',100 },
+            { 'D',500 },
+            { 'M',1000 }
+        };
+
+        internal IEnumerable<int> MapRomanDigitsToDecimalDigits(string romanNumber)
+        {
+            return romanNumber.Select((c) => _numbers[c]);
         }
     }
 }
