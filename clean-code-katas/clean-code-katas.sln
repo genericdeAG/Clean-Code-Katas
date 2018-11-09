@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todictionary.tests", "todic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todictionary", "todictionary\todictionary.csproj", "{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fromromannumerals.tests", "toromannumerals.tests\fromromannumerals.tests.csproj", "{3484AF97-3ECB-4D5D-A19C-58270CADB3D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3484AF97-3ECB-4D5D-A19C-58270CADB3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3484AF97-3ECB-4D5D-A19C-58270CADB3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3484AF97-3ECB-4D5D-A19C-58270CADB3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3484AF97-3ECB-4D5D-A19C-58270CADB3D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{D06B579B-4270-40D4-AE72-481828C5C9DC} = {A6B4F3FA-686E-44FC-B765-E35A7010999D}
 		{B4F85FD8-A834-4A40-B55F-4887D0AC8F94} = {D06B579B-4270-40D4-AE72-481828C5C9DC}
 		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69} = {A6B4F3FA-686E-44FC-B765-E35A7010999D}
+		{3484AF97-3ECB-4D5D-A19C-58270CADB3D7} = {D06B579B-4270-40D4-AE72-481828C5C9DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}
