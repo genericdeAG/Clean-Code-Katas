@@ -43,6 +43,20 @@ namespace fromromannumerals.tests
 
             signedDecimalDigits.Should().BeEquivalentTo(actual);
         }
+
+        [Theory]
+        [InlineData(new[] { -1, +5 }, 4)]
+        [InlineData(new[] { +10, +10, +5, +1 }, 26)]
+        [InlineData(new[] { +1000, +500, +100 }, 1600)]
+        [InlineData(new[] { +50 }, 50)]
+        [InlineData(new[] { +1, +1, +1 }, 3)]
+        [InlineData(new[] { +5, +1, +1 }, 7)]
+        public void SumNumbers_GivenSignedDecimalDigits_ShouldReturn_DecimalNumber(int[] signedDigits, int decimalNumber)
+        {
+            var actual = _target.SumNumbers(signedDigits);
+
+            decimalNumber.Should().Be(actual);
+        }
     }
 
     internal class RomanToDecimalConverter
@@ -91,6 +105,11 @@ namespace fromromannumerals.tests
         private static bool NotLastDigit(int position, int[] digits)
         {
             return position + 1 < digits.Count();
+        }
+
+        internal int SumNumbers(IEnumerable<int> signedDigits)
+        {
+            throw new NotImplementedException();
         }
     }
 }
