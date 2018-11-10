@@ -5,6 +5,8 @@ Diese sind unterteilt nach den folgenden Kategorien:
 
 * Function Katas/Code Katas - *sind kleine Aufgaben, deren Problemstellung ein Algorithmus ist. Ihre Lösung besteht aus einer Funktion – vorbehaltlich eventueller Refaktorisierungen.*
   * ToDictionary
+  * From Roman Numerals
+  * Fizz Buzz
   
 * Class Katas - *sind Aufgaben, deren Problem sich mittels einer Klasse und mehrerer Funktionen lösen lässt – wieder vorbehaltlich eventueller Refaktorisierungen. Hier geht es eher um Abstrakte Datentypen oder Adapter.*
 
