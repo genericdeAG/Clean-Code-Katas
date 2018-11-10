@@ -29,7 +29,7 @@ namespace fizzbuzz.tests
     {
         public IEnumerable<int> GenerateNumbers()
         {
-            throw new System.NotImplementedException();
+            return Enumerable.Range(0, 100);
         }
     }
 }
