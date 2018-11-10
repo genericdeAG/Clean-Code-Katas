@@ -68,6 +68,12 @@
   <ItemGroup>
     <Analyzer Include="..\..\..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\fizzbuzz\fizzbuzz.csproj">
+      <Project>{AD5A1129-A66A-4F0E-9AAA-F814C6BED942}</Project>
+      <Name>fizzbuzz</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
