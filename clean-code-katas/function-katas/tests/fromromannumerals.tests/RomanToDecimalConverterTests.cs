@@ -65,22 +65,32 @@ namespace fromromannumerals.tests
 
         internal IEnumerable<int> SignNumbers(IEnumerable<int> decimalDigits)
         {
-            var signedDigits = new List<int>();
             var digits = decimalDigits.ToArray();
+            var signedDigits = new List<int>();
 
-            for (int i = 0; i < digits.Count(); i++)
+            for (var position = 0; position < digits.Count(); position++)
             {
-                if (i + 1 < digits.Count() && digits[i + 1] > digits[i])
+                if (NotLastDigit(position, digits) && SmallerNextThatNextDigit(digits, position))
                 {
-                    signedDigits.Add(-digits[i]);
+                    signedDigits.Add(-digits[position]);
                 }
                 else
                 {
-                    signedDigits.Add(+digits[i]);
+                    signedDigits.Add(+digits[position]);
                 }
             }
 
             return signedDigits;
+        }
+
+        private static bool SmallerNextThatNextDigit(int[] digits, int position)
+        {
+            return digits[position + 1] > digits[position];
+        }
+
+        private static bool NotLastDigit(int position, int[] digits)
+        {
+            return position + 1 < digits.Count();
         }
     }
 }
