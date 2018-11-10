@@ -51,7 +51,7 @@ namespace fromromannumerals.tests
         [InlineData(new[] { +50 }, 50)]
         [InlineData(new[] { +1, +1, +1 }, 3)]
         [InlineData(new[] { +5, +1, +1 }, 7)]
-        public void SumNumbers_GivenSignedDecimalDigits_ShouldReturn_DecimalNumber(int[] signedDigits, int decimalNumber)
+        public void SumNumbers_GivenSignedDecimalDigits_ShouldReturnDecimalNumber(int[] signedDigits, int decimalNumber)
         {
             var actual = _target.SumNumbers(signedDigits);
 
