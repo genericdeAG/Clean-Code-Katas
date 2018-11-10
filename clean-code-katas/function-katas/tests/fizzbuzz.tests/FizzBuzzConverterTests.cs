@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Xunit;
 
@@ -60,7 +61,7 @@ namespace fizzbuzz.tests
 
         public IEnumerable<string> ConvertToFizzBuzzTexts(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            return numbers.Select(n => ConvertToFizzBuzzText(n));
         }
     }
 }
