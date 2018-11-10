@@ -109,7 +109,7 @@ namespace fromromannumerals.tests
 
         internal int SumNumbers(IEnumerable<int> signedDigits)
         {
-            throw new NotImplementedException();
+            return signedDigits.Aggregate((a, b) => a + b);
         }
     }
 }
