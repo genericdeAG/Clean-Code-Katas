@@ -129,7 +129,9 @@ namespace fromromannumerals.tests
 
         public int ConvertToDecimalNumber(string romanNumber)
         {
-            throw new NotImplementedException();
+            var decimalDigits = MapRomanDigitsToDecimalDigits(romanNumber);
+            var signedDigits = SignNumbers(decimalDigits);
+            return SumNumbers(signedDigits);
         }
     }
 }
