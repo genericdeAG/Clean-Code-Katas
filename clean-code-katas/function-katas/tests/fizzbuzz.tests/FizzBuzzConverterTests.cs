@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
@@ -10,6 +11,17 @@ namespace fizzbuzz.tests
         public FizzBuzzConverterTests()
         {
             _target = new FizzBuzzConverter();
+        }
+
+        [Fact]
+        public void ConvertToFizzBuzzTexts_GivenNumbers_ShouldReturnFizzBuzzTexts()
+        {
+            var numbers = new[] { 1, 2, 3, 4, 5, 6, 7, 14, 15, 16 };
+            var expected = new[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "14", "FizzBuzz", "16" };
+
+            var actual = _target.ConvertToFizzBuzzTexts(numbers);
+
+            expected.Should().BeEquivalentTo(actual);
         }
 
         [Theory]
@@ -44,6 +56,11 @@ namespace fizzbuzz.tests
         private bool IsNumberDivisibleByFive(int number)
         {
             return number % 5 == 0;
+        }
+
+        public IEnumerable<string> ConvertToFizzBuzzTexts(IEnumerable<int> numbers)
+        {
+            throw new NotImplementedException();
         }
     }
 }
