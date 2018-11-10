@@ -7,7 +7,7 @@ namespace fizzbuzz
     {
         public IEnumerable<int> GenerateNumbers()
         {
-            return Enumerable.Range(0, 100);
+            return Enumerable.Range(1, 100);
         }
     }
 }

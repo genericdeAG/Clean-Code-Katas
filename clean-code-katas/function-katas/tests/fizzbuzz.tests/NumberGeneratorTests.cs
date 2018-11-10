@@ -16,7 +16,7 @@ namespace fizzbuzz.tests
         [Fact]
         public void GenerateNumbers_ShouldReturnNumbersFrom1To100()
         {
-            var expected = Enumerable.Range(0, 100);
+            var expected = Enumerable.Range(1, 100);
 
             var actual = _target.GenerateNumbers();
 
