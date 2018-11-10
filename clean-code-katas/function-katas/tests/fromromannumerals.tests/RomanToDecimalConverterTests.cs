@@ -57,6 +57,21 @@ namespace fromromannumerals.tests
 
             decimalNumber.Should().Be(actual);
         }
+
+        [Theory]
+        [InlineData("IV", 4)]
+        [InlineData("XXVI", 26)]
+        [InlineData("MDC", 1600)]
+        [InlineData("L", 50)]
+        [InlineData("V", 5)]
+        [InlineData("III", 3)]
+        [InlineData("VII", 7)]
+        public void ConvertToDecimalNumber_GivenRomanNumber_ShouldReturnDecimalNumber(string romanNumber, int decimalNumber)
+        {
+            var actual = _target.ConvertToDecimalNumber(romanNumber);
+
+            decimalNumber.Should().Be(actual);
+        }
     }
 
     internal class RomanToDecimalConverter
@@ -110,6 +125,11 @@ namespace fromromannumerals.tests
         internal int SumNumbers(IEnumerable<int> signedDigits)
         {
             return signedDigits.Aggregate((a, b) => a + b);
+        }
+
+        public int ConvertToDecimalNumber(string romanNumber)
+        {
+            throw new NotImplementedException();
         }
     }
 }
