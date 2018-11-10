@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 
 namespace fizzbuzz.tests
@@ -28,7 +29,21 @@ namespace fizzbuzz.tests
     {
         internal string ConvertToFizzBuzzText(int number)
         {
-            throw new System.NotImplementedException();
+            if (IsNumberDivisibleByThree(number) && IsNumberDivisibleByFive(number)) return "FizzBuzz";
+            if (IsNumberDivisibleByThree(number)) return "Fizz";
+            if (IsNumberDivisibleByFive(number)) return "Buzz";
+
+            return Convert.ToString(number);
+        }
+
+        private bool IsNumberDivisibleByThree(int number)
+        {
+            return number % 3 == 0;
+        }
+
+        private bool IsNumberDivisibleByFive(int number)
+        {
+            return number % 5 == 0;
         }
     }
 }
