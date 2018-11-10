@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
@@ -42,16 +41,6 @@ namespace fizzbuzz.tests
             _target.DisplayTexts(texts, DisplayAction);
 
             expected.Should().BeEquivalentTo(actual);
-        }
-    }
-
-    internal class TextDisplay
-    {
-        public void DisplayTexts(List<string> texts, Action<string> displayAction)
-        {
-            var output = string.Join(",", texts);
-
-            displayAction(output);
         }
     }
 }
