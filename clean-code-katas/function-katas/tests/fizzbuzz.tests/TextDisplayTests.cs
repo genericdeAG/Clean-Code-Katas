@@ -38,8 +38,8 @@ namespace fizzbuzz.tests
             var expected = "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz";
 
             var actual = string.Empty;
-            void displayAction(string s) => actual = s;
-            _target.DisplayTexts(texts, displayAction);
+            void DisplayAction(string s) => actual = s;
+            _target.DisplayTexts(texts, DisplayAction);
 
             expected.Should().BeEquivalentTo(actual);
         }
