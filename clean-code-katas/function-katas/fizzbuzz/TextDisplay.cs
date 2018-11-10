@@ -5,7 +5,7 @@ namespace fizzbuzz
 {
     internal class TextDisplay
     {
-        public void DisplayTexts(List<string> texts, Action<string> displayAction)
+        public void DisplayTexts(IEnumerable<string> texts, Action<string> displayAction)
         {
             var output = string.Join(",", texts);
 
