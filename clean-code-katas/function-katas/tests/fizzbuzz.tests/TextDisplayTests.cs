@@ -49,7 +49,9 @@ namespace fizzbuzz.tests
     {
         public void DisplayTexts(List<string> texts, Action<string> displayAction)
         {
-            throw new System.NotImplementedException();
+            var output = string.Join(",", texts);
+
+            displayAction(output);
         }
     }
 }
