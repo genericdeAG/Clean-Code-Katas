@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using FluentAssertions;
 using Xunit;
 
@@ -22,14 +21,6 @@ namespace fizzbuzz.tests
             var actual = _target.GenerateNumbers();
 
             expected.Should().BeEquivalentTo(actual);
-        }
-    }
-
-    internal class NumberGenerator
-    {
-        public IEnumerable<int> GenerateNumbers()
-        {
-            return Enumerable.Range(0, 100);
         }
     }
 }
