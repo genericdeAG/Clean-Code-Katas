@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "function-katas", "function-katas", "{A6B4F3FA-686E-44FC-B765-E35A7010999D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "class-katas", "class-katas", "{525128B4-8571-44CE-B544-E100D833BC96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library-katas", "library-katas", "{C164003E-7726-498D-B9D7-43152CED975B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application-katas", "application-katas", "{77CDB5D1-77AF-4193-B54F-E0A9EC0CF8DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "architecture-katas", "architecture-katas", "{561B63E7-5068-4355-A429-7D2417007E9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "refactoring-katas", "refactoring-katas", "{B81C9495-A5BB-454D-B820-8996C99BB6DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "agility-katas", "agility-katas", "{3C430E20-EAAC-4867-8483-9ED3E439EF7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D06B579B-4270-40D4-AE72-481828C5C9DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todictionary.tests", "todictionary.tests\todictionary.tests.csproj", "{B4F85FD8-A834-4A40-B55F-4887D0AC8F94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todictionary", "todictionary\todictionary.csproj", "{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4F85FD8-A834-4A40-B55F-4887D0AC8F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F85FD8-A834-4A40-B55F-4887D0AC8F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F85FD8-A834-4A40-B55F-4887D0AC8F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F85FD8-A834-4A40-B55F-4887D0AC8F94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D06B579B-4270-40D4-AE72-481828C5C9DC} = {A6B4F3FA-686E-44FC-B765-E35A7010999D}
+		{B4F85FD8-A834-4A40-B55F-4887D0AC8F94} = {D06B579B-4270-40D4-AE72-481828C5C9DC}
+		{8BEDB266-9DCA-4BE6-B3C3-152095E71D69} = {A6B4F3FA-686E-44FC-B765-E35A7010999D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}
+	EndGlobalSection
+EndGlobal
