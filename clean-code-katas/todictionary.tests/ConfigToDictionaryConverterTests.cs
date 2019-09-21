@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using FluentAssertions;
-using Xunit;
-
-namespace todictionary.tests
+﻿namespace todictionary.tests
 {
+    using System.Collections.Generic;
+    using FluentAssertions;
+    using Xunit;
+
     public class ConfigToDictionaryConverterTests
     {
         private readonly ConfigToDictionaryConverter _target;
@@ -18,7 +17,7 @@ namespace todictionary.tests
         public void ToDictionary_GivenConfigCsv_ShouldReturnDictionaryFilledWithTheConfiguration()
         {
             var csv = "a=1;b=2;c=3;d=4;";
-            var expected = new Dictionary<string, string> { { "a", "1" }, { "b", "2" }, { "c", "3" }, { "d", "4" } };
+            var expected = new Dictionary<string, string> {{"a", "1"}, {"b", "2"}, {"c", "3"}, {"d", "4"}};
 
             var actual = _target.ToDictionary(csv);
 
@@ -50,7 +49,7 @@ namespace todictionary.tests
         [Fact]
         public void WriteToDictionary_GivenKeyValuePairs_ShouldReturnFilledDictionary()
         {
-            var keyValuePairs = new List<(string, string)> { ("a", "1"), ("b", "2"), ("c", "3"), ("d", "4") };
+            var keyValuePairs = new List<(string, string)> {("a", "1"), ("b", "2"), ("c", "3"), ("d", "4")};
             var expected = new Dictionary<string, string> {{"a", "1"}, {"b", "2"}, {"c", "3"}, {"d", "4"}};
 
             var actual = _target.WriteToDictionary(keyValuePairs);

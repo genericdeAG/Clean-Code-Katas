@@ -5,13 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4F85FD8-A834-4A40-B55F-4887D0AC8F94}</ProjectGuid>
+    <ProjectGuid>{88DAF0AA-BB2D-4F90-8208-211BF124E7DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>todictionary.tests</RootNamespace>
     <AssemblyName>todictionary.tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -60,8 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigToDictionaryConverterTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -70,8 +69,8 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\todictionary\todictionary.csproj">
-      <Project>{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}</Project>
+    <ProjectReference Include="..\function-katas\todictionary\todictionary.csproj">
+      <Project>{8bedb266-9dca-4be6-b3c3-152095e71d69}</Project>
       <Name>todictionary</Name>
     </ProjectReference>
   </ItemGroup>
