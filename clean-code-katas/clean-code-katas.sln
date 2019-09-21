@@ -27,9 +27,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fizzbuzz.tests", "function-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fizzbuzz", "function-katas\fizzbuzz\fizzbuzz.csproj", "{AD5A1129-A66A-4F0E-9AAA-F814C6BED942}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ccd_fizzbuzz", "ccd_fizzbuzz", "{33F4B0B6-6D91-45DC-8B2D-B1FD11DE7DCA}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todictionary", "function-katas\todictionary\todictionary.csproj", "{8BEDB266-9DCA-4BE6-B3C3-152095E71D69}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todictionary.tests", "todictionary.tests\todictionary.tests.csproj", "{88DAF0AA-BB2D-4F90-8208-211BF124E7DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz", "function-katas\ccd_fizzbuzz\FizzBuzz.csproj", "{50F61303-1A38-4AF2-A673-22FF4FB73B33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
