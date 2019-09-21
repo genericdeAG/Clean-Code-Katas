@@ -6,7 +6,7 @@ namespace FizzBuzz
     {
         public static void Main()
         {
-            var numbers = NumbersGenerator.GetNumbers();
+            var numbers = NumbersGenerator.GenerateNumbers();
             var fizzBuzzes = numbers.Select(FizzBuzzer.GetFizzBuzzString);
             Presentation.DisplayTexts(fizzBuzzes);
         }
