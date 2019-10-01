@@ -53,9 +53,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "file_io_fromromannumerals.t
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adapters", "adapters", "{EBDB7026-A7D9-422D-878E-819F752D7499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "persistence", "library-katas\file_io_fromromannumerals\adapters\persistence\persistence.csproj", "{9148D325-CF1F-4D72-9C1F-1B44572B35A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "persistence", "library-katas\file_io_fromromannumerals\adapters\persistence\persistence.csproj", "{9148D325-CF1F-4D72-9C1F-1B44572B35A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui", "library-katas\file_io_fromromannumerals\adapters\ui\ui.csproj", "{5DAF226F-E35B-49A4-AD0C-CD71929FD62B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ui", "library-katas\file_io_fromromannumerals\adapters\ui\ui.csproj", "{5DAF226F-E35B-49A4-AD0C-CD71929FD62B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cli", "library-katas\file_io_fromromannumerals\adapters\cli\cli.csproj", "{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,10 @@ Global
 		{5DAF226F-E35B-49A4-AD0C-CD71929FD62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DAF226F-E35B-49A4-AD0C-CD71929FD62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DAF226F-E35B-49A4-AD0C-CD71929FD62B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +150,7 @@ Global
 		{EBDB7026-A7D9-422D-878E-819F752D7499} = {772A7E15-82AC-4FDE-8D9D-0220F4914488}
 		{9148D325-CF1F-4D72-9C1F-1B44572B35A5} = {EBDB7026-A7D9-422D-878E-819F752D7499}
 		{5DAF226F-E35B-49A4-AD0C-CD71929FD62B} = {EBDB7026-A7D9-422D-878E-819F752D7499}
+		{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD} = {EBDB7026-A7D9-422D-878E-819F752D7499}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}
