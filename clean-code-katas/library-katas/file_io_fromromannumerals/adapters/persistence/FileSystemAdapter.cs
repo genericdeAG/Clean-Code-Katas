@@ -1,10 +1,14 @@
-﻿namespace providers
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace persistence
 {
     using System.IO;
     using contracts;
     using contracts.Dtos;
 
-    public sealed class Persistence : IFileSystemAdapter
+    public sealed class FileSystemAdapter : IFileSystemAdapter
     {
         public FileDto Read(string path)
         {

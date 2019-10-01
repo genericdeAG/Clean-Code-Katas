@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>providers</AssemblyName>
-    <RootNamespace>providers</RootNamespace>
+    <RootNamespace>adapters.persistence</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\contracts\contracts.csproj" />
+    <ProjectReference Include="..\..\contracts\contracts.csproj" />
   </ItemGroup>
 
 </Project>

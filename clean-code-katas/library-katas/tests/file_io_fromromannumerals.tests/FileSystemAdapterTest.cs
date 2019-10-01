@@ -7,10 +7,10 @@ namespace file_io_fromromannumerals.tests
     using contracts;
     using contracts.Dtos;
     using FluentAssertions;
-    using providers;
+    using persistence;
 
     [Trait("Category","File-System")]
-    public class FileServiceTests
+    public class FileSystemAdapterTest
     {
         private const string InputTestFilePath = "input.txt";
         private const string OutputTestFilePath = "output.txt";
@@ -18,9 +18,9 @@ namespace file_io_fromromannumerals.tests
         private readonly string[] _outputContent = {"1582", "183", "58", "2014"};
         private readonly IFileSystemAdapter _target;
 
-        public FileServiceTests()
+        public FileSystemAdapterTest()
         {
-            _target = new FileService();
+            _target = new FileSystemAdapter();
         }
 
         private void CreateInputFile()
