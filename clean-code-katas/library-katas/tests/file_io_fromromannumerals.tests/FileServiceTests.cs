@@ -16,7 +16,7 @@ namespace file_io_fromromannumerals.tests
         private const string OutputTestFilePath = "output.txt";
         private readonly string[] _inputContent = {"MDLXXXII", "CLXXXIII", "LVIII", "MMXIV"};
         private readonly string[] _outputContent = {"1582", "183", "58", "2014"};
-        private readonly IFileService _target;
+        private readonly IFileSystemAdapter _target;
 
         public FileServiceTests()
         {

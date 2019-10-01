@@ -1,12 +1,10 @@
 ﻿namespace providers
 {
-    using System.Collections.Generic;
     using System.IO;
-    using System.Text;
     using contracts;
     using contracts.Dtos;
 
-    public class FileService : IFileService
+    public sealed class Persistence : IFileSystemAdapter
     {
         public FileDto Read(string path)
         {
