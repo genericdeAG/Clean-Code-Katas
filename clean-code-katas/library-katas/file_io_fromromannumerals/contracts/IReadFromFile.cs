@@ -1,9 +1,10 @@
 ﻿namespace contracts
 {
     using System.Collections.Generic;
+    using Dtos;
 
     public interface IReadFromFile
     {
-        IEnumerable<string> Read(string path);
+        FileDto Read(string path);
     }
 }

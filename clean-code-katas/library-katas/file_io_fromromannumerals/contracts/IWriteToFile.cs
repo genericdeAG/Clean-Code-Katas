@@ -1,7 +1,9 @@
 ﻿namespace contracts
 {
+    using Dtos;
+
     public interface IWriteToFile
     {
-        void Write(string content);
+        void Write(FileDto content);
     }
 }
