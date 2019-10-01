@@ -45,6 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "file_io_fromromannumerals",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "contracts", "library-katas\file_io_fromromannumerals\contracts\contracts.csproj", "{729256E6-C9A8-489E-9153-8DAC7A350706}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "providers", "library-katas\file_io_fromromannumerals\providers\providers.csproj", "{2C2E6214-18E9-4ED7-AAD4-584DBFD91A33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
