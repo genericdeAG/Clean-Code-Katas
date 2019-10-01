@@ -4,7 +4,7 @@
     using contracts;
     using contracts.Dtos;
 
-    public sealed class FileSystemAdapter : IFileSystemAdapter
+    public sealed class FileSystemAdapter : IFileSystem
     {
         public FileDto Read(string path)
         {
