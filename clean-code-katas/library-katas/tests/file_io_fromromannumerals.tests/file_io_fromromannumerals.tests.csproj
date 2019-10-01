@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\file_io_fromromannumerals\contracts\contracts.csproj" />
+    <ProjectReference Include="..\..\file_io_fromromannumerals\core\core\core.csproj" />
     <ProjectReference Include="..\..\file_io_fromromannumerals\providers\providers.csproj" />
   </ItemGroup>
 
