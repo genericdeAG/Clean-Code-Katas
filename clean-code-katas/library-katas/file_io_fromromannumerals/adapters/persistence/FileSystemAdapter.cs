@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace persistence
+﻿namespace adapters.persistence
 {
     using System.IO;
     using contracts;

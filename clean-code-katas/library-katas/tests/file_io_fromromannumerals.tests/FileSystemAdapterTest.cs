@@ -4,10 +4,10 @@ using Xunit;
 namespace file_io_fromromannumerals.tests
 {
     using System.IO;
+    using adapters.persistence;
     using contracts;
     using contracts.Dtos;
     using FluentAssertions;
-    using persistence;
 
     [Trait("Category","File-System")]
     public class FileSystemAdapterTest
