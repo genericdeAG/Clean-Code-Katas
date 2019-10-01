@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using contracts;
 
-    public class FileService : IWriteToFile, IReadFromFile
+    public class FileService : IFileService
     {
         public void Write(string content)
         {
