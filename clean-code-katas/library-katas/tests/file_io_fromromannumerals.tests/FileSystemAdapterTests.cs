@@ -10,7 +10,7 @@ namespace file_io_fromromannumerals.tests
     using FluentAssertions;
 
     [Trait("Category","File-System")]
-    public class FileSystemAdapterTest
+    public class FileSystemAdapterTests
     {
         private const string InputTestFilePath = "input.txt";
         private const string OutputTestFilePath = "output.txt";
@@ -18,7 +18,7 @@ namespace file_io_fromromannumerals.tests
         private readonly string[] _outputContent = {"1582", "183", "58", "2014"};
         private readonly IFileSystem _target;
 
-        public FileSystemAdapterTest()
+        public FileSystemAdapterTests()
         {
             _target = new FileSystemAdapter();
         }

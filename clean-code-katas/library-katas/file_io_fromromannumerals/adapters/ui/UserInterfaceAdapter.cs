@@ -5,7 +5,7 @@ namespace adapters.ui
     using System.Linq;
     using contracts;
 
-    public sealed class UserInterface : IUserInterface
+    public sealed class UserInterfaceAdapter : IUserInterface
     {
         public string AskForFilePath()
         {
