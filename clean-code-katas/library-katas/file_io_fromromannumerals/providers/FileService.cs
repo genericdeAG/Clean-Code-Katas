@@ -1,6 +1,8 @@
 ﻿namespace providers
 {
     using System.Collections.Generic;
+    using System.IO;
+    using System.Text;
     using contracts;
     using contracts.Dtos;
 
@@ -8,12 +10,13 @@
     {
         public FileDto Read(string path)
         {
-            throw new System.NotImplementedException();
+            var content = File.ReadAllLines(path);
+            return FileDto.Create(content);
         }
 
-        public void Write(FileDto content)
+        public void Write(FileDto dto)
         {
-            throw new System.NotImplementedException();
+            File.AppendAllLines(dto.MetaDataDto.FileName, dto.Content);
         }
     }
 }

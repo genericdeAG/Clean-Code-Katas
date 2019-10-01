@@ -4,6 +4,6 @@
 
     public interface IWriteToFile
     {
-        void Write(FileDto content);
+        void Write(FileDto dto);
     }
 }

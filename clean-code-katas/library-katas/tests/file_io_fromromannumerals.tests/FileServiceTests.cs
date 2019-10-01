@@ -35,7 +35,7 @@ namespace file_io_fromromannumerals.tests
             CreateInputFile();
 
             // Act.
-            var content = _target.Read(InputTestFilePath);
+            var content = _target.Read(InputTestFilePath).Content;
 
             // Assert.
             content.Should().BeEquivalentTo(_inputContent);
