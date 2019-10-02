@@ -57,7 +57,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "persistence", "library-kata
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ui", "library-katas\file_io_fromromannumerals\adapters\ui\ui.csproj", "{5DAF226F-E35B-49A4-AD0C-CD71929FD62B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cli", "library-katas\file_io_fromromannumerals\adapters\cli\cli.csproj", "{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cli", "library-katas\file_io_fromromannumerals\adapters\cli\cli.csproj", "{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
