@@ -5,7 +5,7 @@
     using adapters.ui;
     using integration;
 
-    class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {

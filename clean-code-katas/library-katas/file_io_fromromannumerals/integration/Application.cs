@@ -8,7 +8,7 @@
     using contracts.Dtos;
     using core;
 
-    public class Application
+    public sealed class Application
     {
         private readonly IFileSystem _persistence;
         private readonly IUserInterface _ui;
