@@ -6,6 +6,7 @@
     using NSubstitute;
     using Xunit;
 
+    [Trait("Category","Integration")]
     public class ApplicationTests
     {
         private readonly IUserInterface _uiStub;

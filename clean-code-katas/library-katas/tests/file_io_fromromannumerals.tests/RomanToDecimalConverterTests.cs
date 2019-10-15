@@ -8,6 +8,7 @@ namespace file_io_fromromannumerals.tests
     using FluentAssertions;
     using Xunit;
 
+    [Trait("Category","Unit")]
     public class RomanToDecimalConverterTests
     {
         [Theory]
