@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\adapters\cli\cli.csproj" />
+    <ProjectReference Include="..\adapters\persistence\persistence.csproj" />
+    <ProjectReference Include="..\adapters\ui\ui.csproj" />
+    <ProjectReference Include="..\contracts\contracts.csproj" />
+    <ProjectReference Include="..\core\core\core.csproj" />
+  </ItemGroup>
+
+</Project>
