@@ -63,6 +63,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "integration", "library-kata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "host", "library-katas\file_io_fromromannumerals\host\host.csproj", "{F214A634-0727-4046-935C-64CF761C3297}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{FD1C3DF6-7815-425C-A002-7390BC030E05}"
+	ProjectSection(SolutionItems) = preProject
+		library-katas\file_io_fromromannumerals\docs\Flow.png = library-katas\file_io_fromromannumerals\docs\Flow.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +170,7 @@ Global
 		{100C166B-AFE4-44C1-8BD4-DC0EA88A99CD} = {EBDB7026-A7D9-422D-878E-819F752D7499}
 		{334AD0E6-8B0A-488A-A576-8F77F5AC125F} = {772A7E15-82AC-4FDE-8D9D-0220F4914488}
 		{F214A634-0727-4046-935C-64CF761C3297} = {772A7E15-82AC-4FDE-8D9D-0220F4914488}
+		{FD1C3DF6-7815-425C-A002-7390BC030E05} = {772A7E15-82AC-4FDE-8D9D-0220F4914488}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}
