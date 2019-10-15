@@ -2,8 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using contracts;
+    using contracts.Dtos;
     using core;
 
     public class Application
@@ -28,8 +30,16 @@
             var romanNumerals = GetRomanNumerals(filePath);
             var decimalNumbers = ConvertToDecimal(romanNumerals);
             var output = FormatOutput(decimalNumbers);
+            var outputPath = CreateOutputPath(filePath);
+            SaveOutput(output, outputPath);
 
             display(output);
+        }
+
+        private static string CreateOutputPath(string filePath)
+        {
+            var directory = Path.GetDirectoryName(filePath);
+            return Path.Combine(directory, "decimalNumbers.txt");
         }
 
         private IEnumerable<int> ConvertToDecimal(IEnumerable<string> romanNumerals)
@@ -40,6 +50,14 @@
         private string FormatOutput(IEnumerable<int> decimalNumbers)
         {
             return string.Join(", ", decimalNumbers.Select(n => n.ToString()));
+        }
+
+        private void SaveOutput(string content, string filePath)
+        {
+            var decimalNumbers = content.Split(", ", StringSplitOptions.RemoveEmptyEntries);
+            var fileMetaData = new FileMetaDataDto(filePath);
+            var file = FileDto.WithMetaData(decimalNumbers, fileMetaData);
+            _persistence.Write(file);
         }
 
         private IEnumerable<string> GetRomanNumerals(string filePath)
