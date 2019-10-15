@@ -9,12 +9,14 @@ namespace adapters.ui
     {
         public string AskForFilePath()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("file path:");
+            var name = Console.ReadLine();
+            return name;
         }
 
         public void DisplayMessage(string message)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(message);
         }
     }
 }
