@@ -20,6 +20,16 @@ namespace Core.Tests
             result.Should().BeEquivalentTo(decimalDigits);
         }
 
+        [Theory]
+        [InlineData(new[] { 10 }, new[] { 10 })]
+        [InlineData(new[] { 10, 1 }, new[] { 10, 1 })]
+        [InlineData(new[] { 1, 10 }, new[] { -1, 10 })]
+        public void PreSignDigits_Should_AddPlusOrMinusSign_ToDecimalDigits(int[] unsignedDigits, int[] preSignedDigits)
+        {
+            var result = RomanNumeralToDecimalConverter.PreSignDigits(unsignedDigits);
+            result.Should().BeEquivalentTo(preSignedDigits);
+        }
+
         public static class RomanNumeralToDecimalConverter
         {
             private static readonly Dictionary<char, int> RomanDecimalMapping = new Dictionary<char, int>
@@ -36,6 +46,11 @@ namespace Core.Tests
             internal static IEnumerable<int> ConvertToDecimalDigits(string romanNumeral)
             {
                 return romanNumeral.Select(digit => RomanDecimalMapping[digit]);
+            }
+
+            internal static IEnumerable<int> PreSignDigits(IEnumerable<int> unsignedDigits)
+            {
+                throw new NotImplementedException();
             }
         }
     }
