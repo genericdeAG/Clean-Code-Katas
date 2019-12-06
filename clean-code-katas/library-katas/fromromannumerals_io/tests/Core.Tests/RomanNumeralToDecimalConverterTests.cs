@@ -90,7 +90,7 @@ namespace Core.Tests
 
             internal static int SummarizeNumber(IEnumerable<int> signedDigits)
             {
-                throw new NotImplementedException();
+                return signedDigits.Aggregate((first, second) => first + second);
             }
         }
     }
