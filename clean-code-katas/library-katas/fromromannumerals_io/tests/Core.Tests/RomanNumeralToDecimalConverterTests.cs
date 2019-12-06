@@ -54,7 +54,9 @@ namespace Core.Tests
         {
             public static int ConvertToDecimalNumber(string romanNumeral)
             {
-                throw new NotImplementedException();
+                var decimalDigits = ConvertToDecimalDigits(romanNumeral);
+                var presignedDigits = PreSignDigits(decimalDigits);
+                return SummarizeNumber(presignedDigits);
             }
 
             private static readonly Dictionary<char, int> RomanDecimalMapping = new Dictionary<char, int>
