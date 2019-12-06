@@ -11,6 +11,16 @@ namespace Core.Tests
     public class RomanNumeralToDecimalConverterTests
     {
         [Theory]
+        [InlineData("X", 10)]
+        [InlineData("XI", 11)]
+        [InlineData("IX", 9)]
+        public void ConvertToDecimaNumber_Should_ConvertRomanNumeral_ToItsDecimalEquivalent(string romanNumeral, int decimalNumber)
+        {
+            var result = RomanNumeralToDecimalConverter.ConvertToDecimalNumber(romanNumeral);
+            result.Should().Be(decimalNumber);
+        }
+
+        [Theory]
         [InlineData("X", new[] { 10 })]
         [InlineData("XI", new[] { 10, 1 })]
         [InlineData("IX", new [] { 1, 10 })]
@@ -42,6 +52,11 @@ namespace Core.Tests
 
         public static class RomanNumeralToDecimalConverter
         {
+            public static int ConvertToDecimalNumber(string romanNumeral)
+            {
+                throw new NotImplementedException();
+            }
+
             private static readonly Dictionary<char, int> RomanDecimalMapping = new Dictionary<char, int>
             {
                 {'I', 1},
