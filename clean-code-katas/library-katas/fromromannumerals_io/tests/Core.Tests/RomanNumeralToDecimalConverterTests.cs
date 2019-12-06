@@ -30,6 +30,16 @@ namespace Core.Tests
             result.Should().BeEquivalentTo(preSignedDigits);
         }
 
+        [Theory]
+        [InlineData(new[] {10}, 10)]
+        [InlineData(new[] {10, 1}, 11)]
+        [InlineData(new[] {-1, 10}, 9)]
+        public void SumNumbers_Should_SummarizeAllPreSignedDigits_ToDecimalNumber(int[] signedDigits, int decimalNumber)
+        {
+            var result = RomanNumeralToDecimalConverter.SummarizeNumber(signedDigits);
+            result.Should().Be(decimalNumber);
+        }
+
         public static class RomanNumeralToDecimalConverter
         {
             private static readonly Dictionary<char, int> RomanDecimalMapping = new Dictionary<char, int>
@@ -78,7 +88,10 @@ namespace Core.Tests
                 return position + 1 < digits.Count();
             }
 
-
+            internal static int SummarizeNumber(IEnumerable<int> signedDigits)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
