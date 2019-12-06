@@ -50,8 +50,35 @@ namespace Core.Tests
 
             internal static IEnumerable<int> PreSignDigits(IEnumerable<int> unsignedDigits)
             {
-                throw new NotImplementedException();
+                var digits = unsignedDigits.ToArray();
+                var signedDigits = new List<int>();
+
+                for (var position = 0; position < digits.Count(); position++)
+                {
+                    if (NotLastDigit(position, digits) && SmallerNextThatNextDigit(digits, position))
+                    {
+                        signedDigits.Add(-digits[position]);
+                    }
+                    else
+                    {
+                        signedDigits.Add(+digits[position]);
+                    }
+                }
+
+                return signedDigits;
             }
+
+            private static bool SmallerNextThatNextDigit(int[] digits, int position)
+            {
+                return digits[position + 1] > digits[position];
+            }
+
+            private static bool NotLastDigit(int position, int[] digits)
+            {
+                return position + 1 < digits.Count();
+            }
+
+
         }
     }
 }
