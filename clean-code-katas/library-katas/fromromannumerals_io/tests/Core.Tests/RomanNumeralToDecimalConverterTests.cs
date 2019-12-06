@@ -20,36 +20,6 @@ namespace Core.Tests
             result.Should().Be(decimalNumber);
         }
 
-        [Theory]
-        [InlineData("X", new[] { 10 })]
-        [InlineData("XI", new[] { 10, 1 })]
-        [InlineData("IX", new [] { 1, 10 })]
-        public void ConvertToDecimalDigits_Should_ConvertListOfRomanNumerals_ToItsDecimalDigits(string romanNumeral, int[] decimalDigits)
-        {
-            var result = RomanNumeralToDecimalConverter.ConvertToDecimalDigits(romanNumeral);
-            result.Should().BeEquivalentTo(decimalDigits);
-        }
-
-        [Theory]
-        [InlineData(new[] { 10 }, new[] { 10 })]
-        [InlineData(new[] { 10, 1 }, new[] { 10, 1 })]
-        [InlineData(new[] { 1, 10 }, new[] { -1, 10 })]
-        public void PreSignDigits_Should_AddPlusOrMinusSign_ToDecimalDigits(int[] unsignedDigits, int[] preSignedDigits)
-        {
-            var result = RomanNumeralToDecimalConverter.PreSignDigits(unsignedDigits);
-            result.Should().BeEquivalentTo(preSignedDigits);
-        }
-
-        [Theory]
-        [InlineData(new[] {10}, 10)]
-        [InlineData(new[] {10, 1}, 11)]
-        [InlineData(new[] {-1, 10}, 9)]
-        public void SumNumbers_Should_SummarizeAllPreSignedDigits_ToDecimalNumber(int[] signedDigits, int decimalNumber)
-        {
-            var result = RomanNumeralToDecimalConverter.SummarizeNumber(signedDigits);
-            result.Should().Be(decimalNumber);
-        }
-
         public static class RomanNumeralToDecimalConverter
         {
             public static int ConvertToDecimalNumber(string romanNumeral)
@@ -70,12 +40,12 @@ namespace Core.Tests
                 {'M', 1000}
             };
 
-            internal static IEnumerable<int> ConvertToDecimalDigits(string romanNumeral)
+            private static IEnumerable<int> ConvertToDecimalDigits(string romanNumeral)
             {
                 return romanNumeral.Select(digit => RomanDecimalMapping[digit]);
             }
 
-            internal static IEnumerable<int> PreSignDigits(IEnumerable<int> unsignedDigits)
+            private static IEnumerable<int> PreSignDigits(IEnumerable<int> unsignedDigits)
             {
                 var digits = unsignedDigits.ToArray();
                 var signedDigits = new List<int>();
@@ -105,7 +75,7 @@ namespace Core.Tests
                 return position + 1 < digits.Count();
             }
 
-            internal static int SummarizeNumber(IEnumerable<int> signedDigits)
+            private static int SummarizeNumber(IEnumerable<int> signedDigits)
             {
                 return signedDigits.Aggregate((first, second) => first + second);
             }
