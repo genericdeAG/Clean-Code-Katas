@@ -4,6 +4,7 @@ using System.Text;
 
 namespace fromromannumerals_io.Tests
 {
+    using System.IO;
     using contracts;
     using FluentAssertions;
     using Xunit;
@@ -31,7 +32,7 @@ namespace fromromannumerals_io.Tests
     {
         public IEnumerable<string> GetRomanNumerals(string filePath)
         {
-            throw new NotImplementedException();
+            return File.ReadAllLines(filePath);
         }
 
         public void SaveResult(IEnumerable<int> decimalNumbers)
