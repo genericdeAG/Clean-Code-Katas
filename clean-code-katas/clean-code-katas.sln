@@ -45,11 +45,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fromromannumerals_io", "fro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A844E5DA-8867-4F91-A179-DAFB5B506389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fromromannumerals_io.Tests", "library-katas\fromromannumerals_io\tests\Core.Tests\fromromannumerals_io.Tests.csproj", "{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core", "library-katas\fromromannumerals_io\core\core.csproj", "{8B2CFD46-4957-46CD-A059-9BF174682DD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "library-katas\fromromannumerals_io\core\core.csproj", "{8B2CFD46-4957-46CD-A059-9BF174682DD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "contracts", "library-katas\fromromannumerals_io\contracts\contracts.csproj", "{CFF39F08-1724-4C2C-A1F4-B96544D3A18F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contracts", "library-katas\fromromannumerals_io\contracts\contracts.csproj", "{CFF39F08-1724-4C2C-A1F4-B96544D3A18F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "files", "files", "{39C10E4F-19C1-48FD-83E1-579691893695}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fromromannumerals_io.Tests", "library-katas\fromromannumerals_io\tests\fromromannumerals_io.Tests\fromromannumerals_io.Tests.csproj", "{6A698459-4191-47BD-915F-03B5BFEB3BA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,10 +95,6 @@ Global
 		{F149FEF1-AF31-46CB-B551-C4E2AD96BFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F149FEF1-AF31-46CB-B551-C4E2AD96BFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F149FEF1-AF31-46CB-B551-C4E2AD96BFBA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B2CFD46-4957-46CD-A059-9BF174682DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8B2CFD46-4957-46CD-A059-9BF174682DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B2CFD46-4957-46CD-A059-9BF174682DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -105,6 +103,10 @@ Global
 		{CFF39F08-1724-4C2C-A1F4-B96544D3A18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFF39F08-1724-4C2C-A1F4-B96544D3A18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFF39F08-1724-4C2C-A1F4-B96544D3A18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,9 +126,10 @@ Global
 		{F149FEF1-AF31-46CB-B551-C4E2AD96BFBA} = {D06B579B-4270-40D4-AE72-481828C5C9DC}
 		{266C0DD6-427D-4459-8968-9056EEDBD9A4} = {C164003E-7726-498D-B9D7-43152CED975B}
 		{A844E5DA-8867-4F91-A179-DAFB5B506389} = {C164003E-7726-498D-B9D7-43152CED975B}
-		{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6} = {A844E5DA-8867-4F91-A179-DAFB5B506389}
 		{8B2CFD46-4957-46CD-A059-9BF174682DD0} = {266C0DD6-427D-4459-8968-9056EEDBD9A4}
 		{CFF39F08-1724-4C2C-A1F4-B96544D3A18F} = {266C0DD6-427D-4459-8968-9056EEDBD9A4}
+		{39C10E4F-19C1-48FD-83E1-579691893695} = {A844E5DA-8867-4F91-A179-DAFB5B506389}
+		{6A698459-4191-47BD-915F-03B5BFEB3BA9} = {A844E5DA-8867-4F91-A179-DAFB5B506389}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}
