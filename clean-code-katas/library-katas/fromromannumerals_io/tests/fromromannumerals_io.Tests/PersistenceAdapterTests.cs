@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace fromromannumerals_io.Tests
+﻿namespace fromromannumerals_io.Tests
 {
     using System.IO;
     using System.Linq;
     using contracts;
     using FluentAssertions;
+    using persistence;
     using Xunit;
 
     [Trait("Category","ResourceAccess")]
@@ -48,20 +45,6 @@ namespace fromromannumerals_io.Tests
             var decimalNumbers = Enumerable.Empty<int>();
             _persistence.SaveResult(filePath, decimalNumbers);
             File.Exists(filePath).Should().BeTrue();
-        }
-    }
-
-    public class PersistenceAdapter : IPersistence
-    {
-        public IEnumerable<string> GetRomanNumerals(string filePath)
-        {
-            return File.ReadAllLines(filePath);
-        }
-
-        public void SaveResult(string filePath, IEnumerable<int> decimalNumbers)
-        {
-            var decimalNumberStrings = decimalNumbers.Select(d => d.ToString());
-            File.WriteAllLines(filePath, decimalNumberStrings);
         }
     }
 }

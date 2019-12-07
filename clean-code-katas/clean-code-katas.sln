@@ -53,6 +53,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "files", "files", "{39C10E4F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "fromromannumerals_io.Tests", "library-katas\fromromannumerals_io\tests\fromromannumerals_io.Tests\fromromannumerals_io.Tests.csproj", "{6A698459-4191-47BD-915F-03B5BFEB3BA9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adapters", "adapters", "{7A11525B-4500-434B-828A-1BFFF2F3B599}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "persistence", "library-katas\fromromannumerals_io\adapters\persistence\persistence.csproj", "{29841A71-F115-4B6D-8375-182391613344}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +111,10 @@ Global
 		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A698459-4191-47BD-915F-03B5BFEB3BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29841A71-F115-4B6D-8375-182391613344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29841A71-F115-4B6D-8375-182391613344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29841A71-F115-4B6D-8375-182391613344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29841A71-F115-4B6D-8375-182391613344}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,6 +138,8 @@ Global
 		{CFF39F08-1724-4C2C-A1F4-B96544D3A18F} = {266C0DD6-427D-4459-8968-9056EEDBD9A4}
 		{39C10E4F-19C1-48FD-83E1-579691893695} = {A844E5DA-8867-4F91-A179-DAFB5B506389}
 		{6A698459-4191-47BD-915F-03B5BFEB3BA9} = {A844E5DA-8867-4F91-A179-DAFB5B506389}
+		{7A11525B-4500-434B-828A-1BFFF2F3B599} = {266C0DD6-427D-4459-8968-9056EEDBD9A4}
+		{29841A71-F115-4B6D-8375-182391613344} = {7A11525B-4500-434B-828A-1BFFF2F3B599}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}
