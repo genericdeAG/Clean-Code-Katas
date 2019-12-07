@@ -38,6 +38,16 @@ namespace fromromannumerals_io.Tests
             var actual = File.ReadAllLines(filePath);
             actual.Should().BeEquivalentTo(expected);
         }
+
+        [Fact]
+        public void SaveResult_Should_CreateFile_IfItNotExists()
+        {
+            var filePath = @"C:\SRC\Clean-Code-Katas\clean-code-katas\library-katas\fromromannumerals_io\tests\fromromannumerals_io.Tests\files\newFile.txt";
+            File.Delete(filePath);
+            var decimalNumbers = Enumerable.Empty<int>();
+            _persistence.SaveResult(filePath, decimalNumbers);
+            File.Exists(filePath).Should().BeTrue();
+        }
     }
 
     public class PersistenceAdapter : IPersistence
