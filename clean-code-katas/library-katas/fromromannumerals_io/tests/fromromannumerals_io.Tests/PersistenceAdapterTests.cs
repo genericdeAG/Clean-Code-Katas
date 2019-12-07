@@ -5,6 +5,7 @@ using System.Text;
 namespace fromromannumerals_io.Tests
 {
     using System.IO;
+    using System.Linq;
     using contracts;
     using FluentAssertions;
     using Xunit;
@@ -48,7 +49,8 @@ namespace fromromannumerals_io.Tests
 
         public void SaveResult(string filePath, IEnumerable<int> decimalNumbers)
         {
-            throw new NotImplementedException();
+            var decimalNumberStrings = decimalNumbers.Select(d => d.ToString());
+            File.WriteAllLines(filePath, decimalNumberStrings);
         }
     }
 }
