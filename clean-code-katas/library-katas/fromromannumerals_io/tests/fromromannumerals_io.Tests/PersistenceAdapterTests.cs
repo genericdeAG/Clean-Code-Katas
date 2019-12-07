@@ -26,6 +26,17 @@ namespace fromromannumerals_io.Tests
             var actual = _persistence.GetRomanNumerals(filePath);
             actual.Should().BeEquivalentTo(expected);
         }
+
+        [Fact]
+        public void SaveResult_Should_SaveDecimalNumbers_ToGivenFilePath()
+        {
+            var decimalNumbers = new[] {3999, 550, 880, 500, 1994};
+            var expected = new[] { "3999", "550", "880", "500", "1994" };
+            var filePath = @"C:\SRC\Clean-Code-Katas\clean-code-katas\library-katas\fromromannumerals_io\tests\fromromannumerals_io.Tests\files\decimalNumbers.txt";
+            _persistence.SaveResult(decimalNumbers);
+            var actual = File.ReadAllLines(filePath);
+            actual.Should().BeEquivalentTo(expected);
+        }
     }
 
     public class PersistenceAdapter : IPersistence
