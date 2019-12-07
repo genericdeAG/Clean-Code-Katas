@@ -45,7 +45,7 @@
     {
         public string GetFilePathFromParameters(string[] args)
         {
-            throw new NotImplementedException();
+            return args.FirstOrDefault();
         }
     }
 }
