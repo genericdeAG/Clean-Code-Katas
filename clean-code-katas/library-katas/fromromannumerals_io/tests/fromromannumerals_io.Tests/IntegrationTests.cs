@@ -1,6 +1,5 @@
 ﻿namespace fromromannumerals_io.Tests
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using contracts;
@@ -65,7 +64,11 @@
 
         public void Run(string[] args)
         {
-            throw new NotImplementedException();
+            var filePath = _cli.GetFilePathFromParameters(args);
+            var romanNumerals = _persistence.GetRomanNumerals(filePath);
+            var decimalNumbers = romanNumerals.Select(RomanNumeralToDecimalConverter.ConvertToDecimalNumber).ToArray();
+            _persistence.SaveResult(filePath, decimalNumbers);
+            _ui.ShowResult(decimalNumbers);
         }
     }
 }
