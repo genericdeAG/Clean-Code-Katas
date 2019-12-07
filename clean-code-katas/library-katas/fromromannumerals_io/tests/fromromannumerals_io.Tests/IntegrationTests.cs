@@ -1,5 +1,6 @@
 ﻿namespace fromromannumerals_io.Tests
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using contracts;
@@ -30,6 +31,19 @@
             _persistence.SaveResult(OutputFilePath, _dummyDecimalNumbers);
             _ui.ShowResult(_dummyDecimalNumbers);
 
+            _target = new Application(_persistence, _ui, _cli);
+        }
+
+        [Fact]
+        public void AcceptanceTest()
+        {
+            var args = new[] { InputFilePath };
+            _target.Run(args);
+
+            _cli.Received(1).GetFilePathFromParameters(args);
+            _persistence.Received(1).GetRomanNumerals(InputFilePath);
+            _persistence.Received(1).SaveResult(OutputFilePath, _dummyDecimalNumbers);
+            _ui.Received(1).ShowResult(_dummyDecimalNumbers);
         }
     }
 
@@ -49,5 +63,9 @@
             _cli = cli;
         }
 
+        public void Run(string[] args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
