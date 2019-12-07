@@ -57,6 +57,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adapters", "adapters", "{7A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "persistence", "library-katas\fromromannumerals_io\adapters\persistence\persistence.csproj", "{29841A71-F115-4B6D-8375-182391613344}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cli", "library-katas\fromromannumerals_io\adapters\cli\cli.csproj", "{756202F4-665A-41EA-A3A8-04088174A369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{29841A71-F115-4B6D-8375-182391613344}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29841A71-F115-4B6D-8375-182391613344}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29841A71-F115-4B6D-8375-182391613344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756202F4-665A-41EA-A3A8-04088174A369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756202F4-665A-41EA-A3A8-04088174A369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756202F4-665A-41EA-A3A8-04088174A369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756202F4-665A-41EA-A3A8-04088174A369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +146,7 @@ Global
 		{6A698459-4191-47BD-915F-03B5BFEB3BA9} = {A844E5DA-8867-4F91-A179-DAFB5B506389}
 		{7A11525B-4500-434B-828A-1BFFF2F3B599} = {266C0DD6-427D-4459-8968-9056EEDBD9A4}
 		{29841A71-F115-4B6D-8375-182391613344} = {7A11525B-4500-434B-828A-1BFFF2F3B599}
+		{756202F4-665A-41EA-A3A8-04088174A369} = {7A11525B-4500-434B-828A-1BFFF2F3B599}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67C6EEA4-00F5-49D9-B1C1-68D845BC7AFD}

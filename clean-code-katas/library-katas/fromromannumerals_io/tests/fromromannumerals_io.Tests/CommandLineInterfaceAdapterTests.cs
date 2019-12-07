@@ -1,7 +1,7 @@
 ﻿namespace fromromannumerals_io.Tests
 {
-    using System;
     using System.Linq;
+    using cli;
     using contracts;
     using FluentAssertions;
     using Xunit;
@@ -38,14 +38,6 @@
             var args = new[] {"foo", "bar"};
             var actual = _cli.GetFilePathFromParameters(args);
             actual.Should().Be("foo");
-        }
-    }
-
-    public class CommandLineInterfaceAdapter : ICommandLineInterface
-    {
-        public string GetFilePathFromParameters(string[] args)
-        {
-            return args.FirstOrDefault();
         }
     }
 }
