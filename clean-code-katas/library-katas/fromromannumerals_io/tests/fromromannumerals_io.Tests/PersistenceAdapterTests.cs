@@ -10,6 +10,7 @@ namespace fromromannumerals_io.Tests
     using FluentAssertions;
     using Xunit;
 
+    [Trait("Category","ResourceAccess")]
     public class PersistenceAdapterTests
     {
         private readonly IPersistence _persistence;
