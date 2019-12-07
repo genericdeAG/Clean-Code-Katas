@@ -8,6 +8,6 @@ namespace contracts
     {
         IEnumerable<string> GetRomanNumerals(string filePath);
 
-        void SaveResult(IEnumerable<int> decimalNumbers);
+        void SaveResult(string filePath, IEnumerable<int> decimalNumbers);
     }
 }

@@ -33,7 +33,7 @@ namespace fromromannumerals_io.Tests
             var decimalNumbers = new[] {3999, 550, 880, 500, 1994};
             var expected = new[] { "3999", "550", "880", "500", "1994" };
             var filePath = @"C:\SRC\Clean-Code-Katas\clean-code-katas\library-katas\fromromannumerals_io\tests\fromromannumerals_io.Tests\files\decimalNumbers.txt";
-            _persistence.SaveResult(decimalNumbers);
+            _persistence.SaveResult(filePath, decimalNumbers);
             var actual = File.ReadAllLines(filePath);
             actual.Should().BeEquivalentTo(expected);
         }
@@ -46,7 +46,7 @@ namespace fromromannumerals_io.Tests
             return File.ReadAllLines(filePath);
         }
 
-        public void SaveResult(IEnumerable<int> decimalNumbers)
+        public void SaveResult(string filePath, IEnumerable<int> decimalNumbers)
         {
             throw new NotImplementedException();
         }
