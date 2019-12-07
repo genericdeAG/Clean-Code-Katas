@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fromromannumerals_io", "fro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A844E5DA-8867-4F91-A179-DAFB5B506389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Tests", "library-katas\fromromannumerals_io\tests\Core.Tests\Core.Tests.csproj", "{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fromromannumerals_io.Tests", "library-katas\fromromannumerals_io\tests\Core.Tests\fromromannumerals_io.Tests.csproj", "{2BEADFFF-08F1-4EE6-AB9B-6F36C8C9FCB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "library-katas\fromromannumerals_io\core\core.csproj", "{8B2CFD46-4957-46CD-A059-9BF174682DD0}"
 EndProject

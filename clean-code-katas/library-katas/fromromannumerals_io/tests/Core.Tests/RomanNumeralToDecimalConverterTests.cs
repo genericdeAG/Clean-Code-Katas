@@ -1,11 +1,8 @@
-using System;
-using Xunit;
-
-namespace Core.Tests
+namespace fromromannumerals_io.Tests
 {
-    using System.Collections;
     using core;
     using FluentAssertions;
+    using Xunit;
 
     public class RomanNumeralToDecimalConverterTests
     {
